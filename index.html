@@ -349,6 +349,13 @@ footer small{color:var(--muted);font-size:13px}
 .js-anim .rv.in{opacity:1;transform:none}
 .js-anim .card.rv{transform:translateY(60px)}
 .js-anim .card.rv.in{transform:none}
+/* 6 steps: faint moving background that follows the active step */
+#learn{position:relative;isolation:isolate}
+.r3-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:clip}
+.r3-bg-in{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden}
+.r3-bg-in i{position:absolute;inset:-6%;background:center/cover no-repeat;opacity:0;transform:scale(1.08);transition:opacity 1.4s ease,transform 6s ease-out}
+.r3-bg-in i.on{opacity:.32;transform:scale(1)}
+.r3-bg-in::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(14,15,18,.15),rgba(14,15,18,.7) 80%),linear-gradient(180deg,var(--ink) 0%,transparent 18%,transparent 82%,var(--ink) 100%)}
 /* ===== 6 steps: zigzag with turning logo in the middle ===== */
 @keyframes recblink{to{visibility:hidden}}
 .reel3d{position:relative;margin-top:40px;display:grid;grid-template-columns:1fr 180px 1fr;grid-auto-rows:auto;column-gap:10px}
@@ -556,6 +563,7 @@ footer small{color:var(--muted);font-size:13px}
 
   <!-- THE PROCESS -->
   <section id="learn">
+    <div class="r3-bg" aria-hidden="true"><div class="r3-bg-in"><i style="background-image:url(img/steps/bg01.jpg)"></i><i style="background-image:url(img/steps/bg02.jpg)"></i><i style="background-image:url(img/steps/bg03.jpg)"></i><i style="background-image:url(img/steps/bg04.jpg)"></i><i style="background-image:url(img/steps/bg05.jpg)"></i><i style="background-image:url(img/steps/bg06.jpg)"></i></div></div>
     <div class="wrap">
       <div class="strip-head">
         <div class="label"><span class="km">ដំណើរការបង្កើតភាពយន្ត</span><span class="en">The process</span></div>
@@ -931,11 +939,14 @@ footer small{color:var(--muted);font-size:13px}
   steps.forEach(function(s){io.observe(s)});
   /* logo turn follows the scroll with easing, so it never jumps */
   var target=0,ry=0,run=false,vis=false;
+  var bgs=[].slice.call(document.querySelectorAll('#learn .r3-bg-in i')),curBg=-1;
   function measure(){var r=box.getBoundingClientRect(),vh=innerHeight;
     vis=r.bottom>-200&&r.top<vh+200;
     var p=Math.min(1,Math.max(0,(vh*.5-r.top)/Math.max(1,r.height)));
     target=p*540;
     if(fill)fill.style.setProperty('--fill',p.toFixed(4));
+    if(bgs.length){var best=0,bd=1e9;for(var k=0;k<steps.length;k++){var sr=steps[k].getBoundingClientRect(),d=Math.abs(sr.top+sr.height/2-vh/2);if(d<bd){bd=d;best=k}}
+      if(r.top>vh*.6)best=0;if(best!==curBg){bgs.forEach(function(b,j){b.classList.toggle('on',j===best)});curBg=best}}
     if(vis)for(var k=0;k<films.length;k++){var fr=films[k].getBoundingClientRect();if(fr.bottom<0||fr.top>vh)continue;
       films[k].style.setProperty('--lp',Math.min(1,Math.max(0,(vh-fr.top)/(vh+fr.height))).toFixed(3))}}
   function frame(){var d=target-ry;
