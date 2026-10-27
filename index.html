@@ -142,6 +142,8 @@ section{padding-block:clamp(72px,10vw,128px)}
 .frames figure:first-child{grid-column:1/-1}
 .frames img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9;transition:transform .6s ease}
 .frames figure:not(:first-child) img{aspect-ratio:3/4}
+.frames .poster-fig img{object-position:50% 100%}
+.frames .poster-fig figcaption{bottom:auto;top:10px}
 .frames figure:hover img{transform:scale(1.04)}
 .frames figcaption{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;background:rgba(0,0,0,.6);padding:5px 8px;border-radius:3px;color:var(--paper)}
 @media (max-width:900px){.show-grid{grid-template-columns:1fr;gap:36px}}
@@ -419,7 +421,7 @@ footer small{color:var(--muted);font-size:13px}
       <div class="frames">
         <figure><img src="img/olt-wide.jpg" alt="ONE LAST TIME film poster, two survivors in a ruined Phnom Penh" width="1672" height="941" loading="lazy"><figcaption>ONE LAST TIME</figcaption></figure>
         <figure><img src="img/olt-pp2044.jpg" alt="ONE LAST TIME, Phnom Penh 2044 scene" width="1448" height="1086" loading="lazy"><figcaption>PHNOM PENH 2044</figcaption></figure>
-        <figure><img src="img/olt-poster.jpg" alt="ONE LAST TIME portrait poster" width="1000" height="1500" loading="lazy"><figcaption>100% AI</figcaption></figure>
+        <figure class="poster-fig"><img src="img/olt-poster.jpg" alt="ONE LAST TIME portrait poster" width="1024" height="1536" loading="lazy"><figcaption>100% AI</figcaption></figure>
       </div>
     </div>
     <div class="wrap more-work">
