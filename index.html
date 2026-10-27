@@ -288,6 +288,21 @@ input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 
 .must-note b{color:var(--gold);font-size:18px}
 .req{color:var(--gold);font-weight:800}
 .hint{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+.pay{display:grid;gap:14px;border:1px solid var(--line);border-radius:10px;padding:18px;background:var(--ink)}
+.pay-head{display:flex;gap:12px;align-items:flex-start}
+.pay-head b{display:block;font-size:17px}.pay-head small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.pay-step{flex:none;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--on-gold);display:grid;place-items:center;font-weight:800}
+.qr{background:#fff;border-radius:12px;padding:12px;width:min(260px,100%);margin:0 auto;position:relative}
+.qr img{width:100%;height:auto;display:block;border-radius:6px}
+.qr .qr-missing{display:none;color:#333;font-size:14px;text-align:center;padding:30px 8px}
+.qr.missing img{display:none}.qr.missing .qr-missing{display:block}
+.pay-acts{display:flex;justify-content:center}.pay-acts .btn{padding:10px 18px;font-size:14px}
+.pay-tip{margin:0;text-align:center;font-size:13px;color:var(--muted);line-height:1.5}
+.pay-acc{margin:0;text-align:center;font-size:14px;color:var(--muted)}.pay-acc b{color:var(--paper);font-family:var(--mono);letter-spacing:.06em}
+.copy-acc{all:unset;cursor:pointer;margin-left:6px;padding:3px 9px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--gold)}
+.pay-ref{margin:0;text-align:center;font-size:14px;color:var(--muted)}.pay-ref b{color:var(--gold);font-family:var(--mono);font-size:16px;letter-spacing:.06em}
+.up-btn{justify-content:center;cursor:pointer}
+.up-status{margin:0;font-size:14px;text-align:center}.up-status.ok{color:#7BD88F}.up-status.bad{color:#FF9B85}
 .thanks{display:grid;gap:14px;text-align:left}
 .thanks h3{font-size:28px;color:var(--gold)}
 .contact{display:grid;gap:22px;align-content:start}
@@ -669,6 +684,7 @@ footer small{color:var(--muted);font-size:13px}
           <input type="hidden" name="from" id="f-from">
           <input type="hidden" name="device" id="f-device">
           <input type="hidden" name="type" value="register">
+          <input type="hidden" name="ref" id="f-ref">
           <p class="err" id="f-err" hidden><span class="km">សូមបំពេញឈ្មោះ លេខទូរស័ព្ទ និងអ៊ីមែលឲ្យបានត្រឹមត្រូវ។</span><span class="en">Please fill in your name, phone and a valid email. Email is required to join the training.</span></p>
           <button class="btn btn-gold" type="submit"><span class="km">ផ្ញើការចុះឈ្មោះ</span><span class="en">Send my registration</span></button>
         </form>
@@ -677,6 +693,17 @@ footer small{color:var(--muted);font-size:13px}
             <h3><span class="km">អរគុណ <span class="who"></span>!</span><span class="en">Thank you, <span class="who"></span>!</span></h3>
             <p class="ty-booked" hidden><span class="km">អ្នកបានកក់កន្លែងក្នុងថ្នាក់ <b class="ty-class"></b> រួចហើយ។ យើងនឹងផ្ញើព័ត៌មានថ្នាក់ទៅអ៊ីមែលរបស់អ្នក។ ចង់និយាយឥឡូវនេះ? ផ្ញើសារមក Telegram។</span><span class="en">Your seat in the <b class="ty-class"></b> class is booked. We'll email you the class details. Want to talk now? Message us on Telegram.</span></p>
             <p class="ty-wait"><span class="km">អ្នកស្ថិតក្នុងបញ្ជីរង់ចាំហើយ។ ពេលកាលបរិច្ឆេទថ្នាក់ត្រូវបានកំណត់ ឬមានកន្លែងទំនេរ យើងនឹងទាក់ទងអ្នកមុនគេ។ ចង់និយាយឥឡូវនេះ? ផ្ញើសារមក Telegram។</span><span class="en">You're on the waiting list. When the class date is set or a seat opens, we'll contact you first. Want to talk now? Message us on Telegram.</span></p>
+            <div class="pay" id="pay">
+              <div class="pay-head"><span class="pay-step">1</span><div><b><span class="km">បង់ប្រាក់ $99 តាម ABA</span><span class="en">Pay $99 with ABA</span></b><small><span class="km">ស្កេន QR នេះ ក្នុងកម្មវិធី ABA ឬធនាគារណាមួយ (KHQR)</span><span class="en">Scan this QR in ABA or any bank app (KHQR)</span></small></div></div>
+              <div class="qr"><img src="img/aba-khqr.jpg" alt="ABA KHQR: UNG SAMBATH, 99 USD" width="850" height="1241" onerror="this.parentNode.classList.add('missing')"><span class="qr-missing"><span class="km">QR នឹងមានឆាប់ៗ · ទាក់ទងយើងតាម Telegram</span><span class="en">QR coming soon · message us on Telegram</span></span></div>
+              <div class="pay-acts"><a class="btn btn-ghost" href="img/aba-khqr-full.jpg" download="ABA-KHQR-Master-AI-Film-99USD.jpg"><span class="km">⬇ រក្សាទុក QR</span><span class="en">⬇ Save QR</span></a></div>
+              <p class="pay-tip"><span class="km">ប្រើទូរស័ព្ទ? រក្សាទុក QR → បើក ABA → Scan → ជ្រើសរូបពីអាល់ប៊ុម</span><span class="en">On your phone? Save the QR → open ABA → Scan → choose the photo from your gallery</span></p>
+              <p class="pay-acc"><span class="km">ឬផ្ទេរទៅគណនី ABA (USD)៖</span><span class="en">Or transfer to ABA (USD):</span> <b>000 610 197</b> · UNG SAMBATH <button type="button" class="copy-acc" data-copy="000610197">Copy</button></p>
+              <p class="pay-ref"><span class="km">សូមសរសេរលេខនេះក្នុងចំណាំបង់ប្រាក់៖</span><span class="en">Write this code in the payment note:</span> <b id="pay-ref">—</b></p>
+              <div class="pay-head"><span class="pay-step">2</span><div><b><span class="km">ផ្ញើរូបថតវិក្កយបត្រ</span><span class="en">Send your payment receipt</span></b><small><span class="km">ថតអេក្រង់ការបង់ប្រាក់ ហើយផ្ញើនៅទីនេះ</span><span class="en">Take a screenshot of the payment and upload it here</span></small></div></div>
+              <label class="btn btn-ghost up-btn"><input type="file" id="receipt" accept="image/*" hidden><span class="km">📎 ជ្រើសរូបវិក្កយបត្រ</span><span class="en">📎 Upload receipt</span></label>
+              <p class="up-status" id="up-status" hidden></p>
+            </div>
             <a class="btn btn-gold" href="https://t.me/ungsambath" target="_blank" rel="noopener">Telegram @ungsambath</a>
           </form>
         </div>
@@ -732,7 +759,9 @@ footer small{color:var(--muted);font-size:13px}
     var name=form.name.value.trim(), phone=form.phone.value.replace(/\D/g,''), email=form.email.value.trim();
     var ok=name.length>1 && phone.length>=8 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     err.hidden=ok; if(!ok) return;
-    try{form.from.value=window.MAF_FROM||'';form.device.value=window.MAF_DEVICE||''}catch(e2){}
+    try{form.from.value=window.MAF_FROM||'';form.device.value=window.MAF_DEVICE||'';
+      if(!form.ref.value){form.ref.value='MAF-'+Math.random().toString(36).slice(2,7).toUpperCase()}
+      document.getElementById('pay-ref').textContent=form.ref.value;window.MAF_REG={ref:form.ref.value,name:name,phone:phone}}catch(e2){}
     var data=new URLSearchParams(new FormData(form)).toString();
     if(window.mafEvent)mafEvent('sign_up',{method:form.heard?form.heard.value:'',source:window.MAF_FROM||''});
     var opt=form['class'].options[form['class'].selectedIndex], waitOpt=!opt||opt.dataset.wait==='1';
@@ -743,6 +772,33 @@ footer small{color:var(--muted);font-size:13px}
     var REG_URL=window.MAF_API||'';
     if(REG_URL){fetch(REG_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data}).then(show,show);}
     else{fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data}).then(show,show);}
+  });
+})();
+
+/* ===== copy ABA account number ===== */
+(function(){var b=document.querySelector('.copy-acc');if(!b)return;b.addEventListener('click',function(){var t=b.dataset.copy;
+  var done=function(){b.textContent='✓ Copied';setTimeout(function(){b.textContent='Copy'},1500)};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,done);else done()})})();
+
+/* ===== upload payment receipt ===== */
+(function(){
+  var inp=document.getElementById('receipt'),st=document.getElementById('up-status');if(!inp)return;
+  function say(t,c){st.hidden=false;st.className='up-status '+(c||'');st.textContent=t}
+  inp.addEventListener('change',function(){
+    var f=inp.files&&inp.files[0];if(!f)return;
+    if(!/^image\//.test(f.type)){say('Please choose a picture (screenshot).','bad');return}
+    say('Sending… · កំពុងផ្ញើ…');
+    var r=new FileReader();r.onload=function(){
+      var im=new Image();im.onload=function(){
+        var max=1600,w=im.width,h=im.height,k=Math.min(1,max/Math.max(w,h));
+        var c=document.createElement('canvas');c.width=Math.round(w*k);c.height=Math.round(h*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+        var data=c.toDataURL('image/jpeg',0.82).split(',')[1], reg=window.MAF_REG||{};
+        var body=new URLSearchParams({type:'receipt',ref:reg.ref||'',name:reg.name||'',phone:reg.phone||'',mime:'image/jpeg',file:data}).toString();
+        fetch(window.MAF_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+          .then(function(){say('✓ Receipt sent! We will confirm your seat soon. · បានផ្ញើរួច! យើងនឹងបញ្ជាក់ឆាប់ៗ','ok');if(window.mafEvent)mafEvent('receipt_upload',{ref:reg.ref||''})})
+          .catch(function(){say('Could not send. Please send the screenshot to us on Telegram.','bad')});
+      };im.src=r.result;
+    };r.readAsDataURL(f);
   });
 })();
 
