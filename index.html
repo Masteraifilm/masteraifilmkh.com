@@ -288,6 +288,18 @@ input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 
 .must-note b{color:var(--gold);font-size:18px}
 .req{color:var(--gold);font-weight:800}
 .hint{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+.fb-ico{width:20px;height:20px;flex:none}
+.trust{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:10px 16px;border-radius:999px;background:rgba(14,15,18,.72);border:1px solid rgba(243,167,67,.55);color:var(--paper);text-decoration:none;font-size:15px;line-height:1.4;max-width:100%;backdrop-filter:blur(6px)}
+.trust b{color:var(--gold);font-weight:700}.trust .fb-ico{color:#4f8df5}.trust .go{color:var(--gold)}
+.trust:hover{border-color:var(--gold)}
+.owner-card{display:flex;align-items:center;gap:16px;margin:4px 0 22px;padding:16px 18px;border:2px solid var(--gold);border-radius:12px;background:rgba(243,167,67,.08);color:var(--paper);text-decoration:none;flex-wrap:wrap}
+.owner-card:hover{background:rgba(243,167,67,.15)}
+.oc-badge{flex:none;width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--on-gold);display:grid;place-items:center;font:800 17px var(--display)}
+.oc-text{flex:1;min-width:200px;display:grid;gap:4px}.oc-text b{font-size:18px}.oc-text small{color:var(--muted);font-size:14px}
+.oc-fb{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:#1877f2;color:#fff;font-weight:700;font-size:14px}
+.oc-fb .fb-ico{width:18px;height:18px}
+.loc-link{color:var(--gold);text-decoration:none}.loc-link:hover{text-decoration:underline}
+@media (max-width:560px){.trust{border-radius:14px;font-size:14px}}
 .pay{display:grid;gap:14px;border:1px solid var(--line);border-radius:10px;padding:18px;background:var(--ink)}
 .pay-head{display:flex;gap:12px;align-items:flex-start}
 .pay-head b{display:block;font-size:17px}.pay-head small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
@@ -429,6 +441,7 @@ footer small{color:var(--muted);font-size:13px}
         <span><b><span class="km">សិស្ស ១២ នាក់</span><span class="en">12 students</span></b> · <span class="km">ក្នុងមួយថ្នាក់</span><span class="en">per class</span></span>
         <span><b>$99</b> · <span class="km">សម្រាប់សិស្ស ១០ នាក់ដំបូង</span><span class="en">for the first 10 students</span></span>
       </div>
+      <a class="trust rise2" href="https://www.facebook.com/share/1FKMSLQNVe/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg class="fb-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg><span><span class="km">បង្រៀនដោយ <b>អ៊ុង សម្បត្តិ</b> ម្ចាស់<b>ភោជនីយដ្ឋានរំចង់</b> (តាំងពីឆ្នាំ ១៩៩៤)</span><span class="en">Taught by <b>Ung Sambath</b>, owner of <b>Rumchong Restaurant</b> (since 1994)</span></span><span class="go">↗</span></a>
     </div>
   </section>
 
@@ -556,7 +569,7 @@ footer small{color:var(--muted);font-size:13px}
         <h2 style="margin-top:18px"><span class="km">អ្វីៗដែលអ្នកត្រូវដឹង</span><span class="en">Everything you need to know.</span></h2>
         <dl class="sheet">
           <div class="sheet-row"><dt><span class="km">ម៉ោងសិក្សា</span><span class="en">Call time</span></dt><dd><span class="km">៧:៣០ ព្រឹក – ៥:០០ ល្ងាច</span><span class="en">7:30 AM – 5:00 PM</span><small><span class="km">មួយថ្ងៃពេញ</span><span class="en">One full day</span></small></dd></div>
-          <div class="sheet-row"><dt><span class="km">ទីកន្លែង</span><span class="en">Location</span></dt><dd><span class="km">ភោជនីយដ្ឋានរំចង់</span><span class="en">Rumchong Restaurant</span></dd></div>
+          <div class="sheet-row"><dt><span class="km">ទីកន្លែង</span><span class="en">Location</span></dt><dd><a class="loc-link" href="https://www.facebook.com/share/1FKMSLQNVe/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="km">ភោជនីយដ្ឋានរំចង់</span><span class="en">Rumchong Restaurant</span> ↗</a></dd></div>
           <div class="sheet-row"><dt><span class="km">ចំនួនសិស្ស</span><span class="en">Class size</span></dt><dd><span class="km">១២ នាក់ក្នុងមួយថ្នាក់</span><span class="en">12 students per class</span></dd></div>
           <div class="sheet-row"><dt><span class="km">ថ្នាក់បន្ទាប់</span><span class="en">Next class</span></dt><dd class="gold"><span class="km">ឆាប់ៗនេះ</span><span class="en">Coming soon</span><small><span class="km">ចុះឈ្មោះឥឡូវនេះ ដើម្បីទទួលដំណឹងមុនគេ</span><span class="en">Register now to hear first</span></small></dd></div>
           <div class="sheet-row"><dt><span class="km">ត្រូវយកមក</span><span class="en">Bring</span></dt><dd><span class="km">អ៊ីមែល និងកុំព្យូទ័រយួរដៃ ឬ iPad</span><span class="en">An email, and a laptop or iPad</span></dd></div>
@@ -587,7 +600,12 @@ footer small{color:var(--muted);font-size:13px}
       <div>
         <div class="directed"><span class="km">ដឹកនាំ និងបង្រៀនដោយ</span><span class="en">Directed and taught by</span></div>
         <h2><span class="km">អ៊ុង សម្បត្តិ</span><span class="en">Ung Sambath</span></h2>
-        <p class="role"><span class="km">អ្នកបង្កើត ONE LAST TIME</span><span class="en">Creator of ONE LAST TIME</span></p>
+        <p class="role"><span class="km">អ្នកបង្កើត ONE LAST TIME · ម្ចាស់ភោជនីយដ្ឋានរំចង់</span><span class="en">Creator of ONE LAST TIME · Owner of Rumchong Restaurant</span></p>
+        <a class="owner-card" href="https://www.facebook.com/share/1FKMSLQNVe/?mibextid=wwXIfr" target="_blank" rel="noopener">
+          <span class="oc-badge">1994</span>
+          <span class="oc-text"><b><span class="km">ម្ចាស់ភោជនីយដ្ឋានរំចង់</span><span class="en">Owner of Rumchong Restaurant</span></b><small><span class="km">ភោជនីយដ្ឋានគ្រួសារ ដែលបើកតាំងពីឆ្នាំ ១៩៩៤ · ថ្នាក់រៀនធ្វើនៅទីនោះ</span><span class="en">A family restaurant open since 1994 · the class is held there</span></small></span>
+          <span class="oc-fb"><svg class="fb-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg><span class="km">មើលទំព័រ Facebook</span><span class="en">See on Facebook</span> ↗</span>
+        </a>
         <div class="bio">
           <p><span class="km">លោក សម្បត្តិ ជាម្ចាស់ភោជនីយដ្ឋានរំចង់ ដែលបើកតាំងពីឆ្នាំ ១៩៩៤។ លោកបានបង្កើតភាពយន្ត ONE LAST TIME ដែលជារឿងហ្សុំប៊ីនៅភ្នំពេញ ឆ្នាំ ២០៤៤ ដោយប្រើ AI ទាំងស្រុង។</span><span class="en">Sambath runs Rumchong Restaurant, open since 1994. He made ONE LAST TIME, a zombie film set in Phnom Penh in 2044, entirely with AI.</span></p>
           <p><span class="km">ឥឡូវនេះ លោកបង្រៀនអ្នកចាប់ផ្ដើមដំបូង ឲ្យធ្វើបានដូចគ្នា ដោយពន្យល់ជាភាសាងាយៗ មួយជំហានម្ដងៗ។ ច្បាប់របស់លោកគឺ៖ ស្រមៃជាមុនសិន បន្ទាប់មកបង្កើតវាជាមួយ Claude។</span><span class="en">Now he teaches beginners to do the same, in plain words and one step at a time. His rule: imagine it first, then build it with Claude.</span></p>
@@ -711,6 +729,7 @@ footer small{color:var(--muted);font-size:13px}
           <div class="c-row"><span class="k"><span class="km">ទូរស័ព្ទ</span><span class="en">Phone</span></span><span class="v"><span id="phone">067 775 755</span><button class="copy" type="button" data-copy="067775755"><span class="km">ចម្លង</span><span class="en">Copy</span></button></span></div>
           <div class="c-row"><span class="k">Telegram</span><span class="v"><a href="https://t.me/ungsambath" target="_blank" rel="noopener">@ungsambath</a></span></div>
           <div class="c-row"><span class="k">Facebook</span><span class="v"><a href="https://www.facebook.com/search/top?q=Master%20AI%20Film%20with%20Claude" target="_blank" rel="noopener">Master AI Film with Claude</a></span></div>
+          <div class="c-row"><span class="k"><span class="km">ភោជនីយដ្ឋានរំចង់</span><span class="en">Rumchong Restaurant</span></span><span class="v"><a href="https://www.facebook.com/share/1FKMSLQNVe/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook ↗</a></span></div>
           <div class="c-row"><span class="k"><span class="km">ទីកន្លែងសិក្សា</span><span class="en">Class location</span></span><span class="v"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rumchong+Restaurant" target="_blank" rel="noopener"><span class="km">ភោជនីយដ្ឋានរំចង់ ↗</span><span class="en">Rumchong Restaurant ↗</span></a></span></div>
         </aside>
       </div>
