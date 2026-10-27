@@ -176,6 +176,21 @@ section{padding-block:clamp(72px,10vw,128px)}
 .steps .n{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.14em}
 .steps h3{font-size:19px}
 .steps p{font-size:15px;color:var(--muted)}
+.steps li{position:relative;overflow:hidden;cursor:zoom-in;isolation:isolate}
+.steps li::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,15,18,.84),rgba(14,15,18,.95) 70%),var(--bg) center/cover;opacity:1;transition:opacity .3s,transform .6s}
+.steps li:hover::before{transform:scale(1.05)}
+.steps li::after{content:"⤢  VIEW";position:absolute;right:12px;bottom:10px;font:600 10px/1 var(--mono);letter-spacing:.14em;color:var(--gold);opacity:.85}
+#learn.pinned .steps li.on::before{opacity:.12}
+.steps li:hover::before{opacity:.85}
+.steps li:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(5,5,7,.92);display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .25s}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:min(1600px,100%);max-height:calc(100vh - 110px);width:auto;height:auto;border-radius:8px;box-shadow:0 30px 80px -20px #000}
+.lightbox .lb-close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:16px;all:unset;cursor:pointer;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--on-gold);display:grid;place-items:center;font:700 22px/1 var(--display)}
+.lightbox .lb-close{position:absolute;top:16px;right:16px}
+.lightbox .lb-nav{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:12px}
+.lightbox .lb-nav button{all:unset;cursor:pointer;padding:10px 18px;border-radius:999px;border:1px solid var(--line);color:var(--paper);font:500 13px var(--mono)}
+
 .strip-note{margin-top:22px;color:var(--muted);font-size:15px;display:flex;gap:10px;align-items:center}
 .strip-note b{color:var(--gold);font-weight:600}
 @media (max-width:1000px){.steps{grid-template-columns:repeat(3,1fr)}}
@@ -465,12 +480,12 @@ footer small{color:var(--muted);font-size:13px}
       </div>
       <div class="strip">
         <ol class="steps">
-          <li><span class="n">01</span><h3><span class="km">រៀបចំគម្រោង</span><span class="en">Plan</span></h3><p><span class="km">គំនិតរបស់អ្នកក្លាយជារឿង និងបញ្ជីឈុតថត។</span><span class="en">Your idea becomes a story and a shot list.</span></p></li>
-          <li><span class="n">02</span><h3><span class="km">តួអង្គ និងទីកន្លែង</span><span class="en">Characters</span></h3><p><span class="km">បង្កើតតួអង្គ ទីកន្លែង និងវត្ថុក្នុងរឿង។</span><span class="en">Create your characters, places and props.</span></p></li>
-          <li><span class="n">03</span><h3><span class="km">រូបភាពគន្លឹះ</span><span class="en">Key frames</span></h3><p><span class="km">រូបភាពដំបូង និងចុងក្រោយ នៃឈុតនីមួយៗ។</span><span class="en">The first and last picture of every shot.</span></p></li>
-          <li><span class="n">04</span><h3><span class="km">ធ្វើជាវីដេអូ</span><span class="en">Shots</span></h3><p><span class="km">បំប្លែងរូបភាពទៅជាវីដេអូមានចលនា។</span><span class="en">Turn your pictures into moving video.</span></p></li>
-          <li><span class="n">05</span><h3><span class="km">កែលម្អ</span><span class="en">Fix</span></h3><p><span class="km">ធ្វើឡើងវិញ តែឈុតណាដែលមិនល្អ។</span><span class="en">Remake only the shot that went wrong.</span></p></li>
-          <li><span class="n">06</span><h3><span class="km">បញ្ចប់</span><span class="en">Finish</span></h3><p><span class="km">តភ្ជាប់ បន្ថែមសំឡេង ចំណងជើង ហើយចែករំលែក។</span><span class="en">Join the clips, add sound and titles, share.</span></p></li>
+          <li tabindex="0" role="button" data-full="img/steps/step01.jpg" style="--bg:url(img/steps/step01-thumb.jpg)"><span class="n">01</span><h3><span class="km">រៀបចំគម្រោង</span><span class="en">Plan</span></h3><p><span class="km">គំនិតរបស់អ្នកក្លាយជារឿង និងបញ្ជីឈុតថត។</span><span class="en">Your idea becomes a story and a shot list.</span></p></li>
+          <li tabindex="0" role="button" data-full="img/steps/step02.jpg" style="--bg:url(img/steps/step02-thumb.jpg)"><span class="n">02</span><h3><span class="km">តួអង្គ និងទីកន្លែង</span><span class="en">Characters</span></h3><p><span class="km">បង្កើតតួអង្គ ទីកន្លែង និងវត្ថុក្នុងរឿង។</span><span class="en">Create your characters, places and props.</span></p></li>
+          <li tabindex="0" role="button" data-full="img/steps/step03.jpg" style="--bg:url(img/steps/step03-thumb.jpg)"><span class="n">03</span><h3><span class="km">រូបភាពគន្លឹះ</span><span class="en">Key frames</span></h3><p><span class="km">រូបភាពដំបូង និងចុងក្រោយ នៃឈុតនីមួយៗ។</span><span class="en">The first and last picture of every shot.</span></p></li>
+          <li tabindex="0" role="button" data-full="img/steps/step04.jpg" style="--bg:url(img/steps/step04-thumb.jpg)"><span class="n">04</span><h3><span class="km">ធ្វើជាវីដេអូ</span><span class="en">Shots</span></h3><p><span class="km">បំប្លែងរូបភាពទៅជាវីដេអូមានចលនា។</span><span class="en">Turn your pictures into moving video.</span></p></li>
+          <li tabindex="0" role="button" data-full="img/steps/step05.jpg" style="--bg:url(img/steps/step05-thumb.jpg)"><span class="n">05</span><h3><span class="km">កែលម្អ</span><span class="en">Fix</span></h3><p><span class="km">ធ្វើឡើងវិញ តែឈុតណាដែលមិនល្អ។</span><span class="en">Remake only the shot that went wrong.</span></p></li>
+          <li tabindex="0" role="button" data-full="img/steps/step06.jpg" style="--bg:url(img/steps/step06-thumb.jpg)"><span class="n">06</span><h3><span class="km">បញ្ចប់</span><span class="en">Finish</span></h3><p><span class="km">តភ្ជាប់ បន្ថែមសំឡេង ចំណងជើង ហើយចែករំលែក។</span><span class="en">Join the clips, add sound and titles, share.</span></p></li>
         </ol>
       </div>
       <p class="strip-note"><b>+</b><span class="km">និងច្បាប់មាសមួយ ដែលជួយសន្សំប្រាក់អ្នកគ្រប់ភាពយន្ត។ អ្នកនឹងរៀនវានៅក្នុងថ្នាក់។</span><span class="en">Plus one golden rule that saves you money on every film. You'll learn it in class.</span></p>
@@ -749,6 +764,22 @@ footer small{color:var(--muted);font-size:13px}
     if(first)first.selected=true;
     if(hint)hint.hidden=true;
   }).catch(function(){});
+})();
+
+/* ===== step pictures: tap a step to see it big ===== */
+(function(){
+  var lis=[].slice.call(document.querySelectorAll('.steps li[data-full]'));if(!lis.length)return;
+  var lb=document.createElement('div');lb.className='lightbox';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Step picture');
+  lb.innerHTML='<img alt=""><button class="lb-close" type="button" aria-label="Close">✕</button><div class="lb-nav"><button type="button" data-d="-1">← Prev</button><button type="button" data-d="1">Next →</button></div>';
+  document.body.appendChild(lb);var img=lb.querySelector('img'),cur=0;
+  function show(i){cur=(i+lis.length)%lis.length;img.src=lis[cur].dataset.full;img.alt=(lis[cur].querySelector('h3 .en')||{}).textContent||'Step';lb.classList.add('open');if(window.mafEvent)mafEvent('step_view',{step:cur+1})}
+  function close(){lb.classList.remove('open')}
+  lis.forEach(function(li,i){li.addEventListener('click',function(){show(i)});li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i)}})});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-close'))close()});
+  lb.querySelectorAll('.lb-nav button').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();show(cur+ +b.dataset.d)})});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1)});
+  var x0=null;lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0==null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));x0=null});
 })();
 
 /* ===== count video plays ===== */
