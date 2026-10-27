@@ -270,6 +270,7 @@ input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 
 .must-note p{margin:0;font-size:16px;line-height:1.6}
 .must-note b{color:var(--gold);font-size:18px}
 .req{color:var(--gold);font-weight:800}
+.hint{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
 .thanks{display:grid;gap:14px;text-align:left}
 .thanks h3{font-size:28px;color:var(--gold)}
 .contact{display:grid;gap:22px;align-content:start}
@@ -641,6 +642,13 @@ footer small{color:var(--muted);font-size:13px}
               <option value="Other">Other · ផ្សេងៗ</option>
             </select>
           </div>
+          <div class="field">
+            <label for="f-class"><span class="km">តើអ្នកចង់ចូលរៀនថ្នាក់ណា?</span><span class="en">Which class do you want to join?</span></label>
+            <select id="f-class" name="class">
+              <option value="" data-wait="1">Waiting list · next class (date TBA) · បញ្ជីរង់ចាំ</option>
+            </select>
+            <p class="hint" id="class-hint"><span class="km">កាលបរិច្ឆេទថ្នាក់នឹងប្រកាសឆាប់ៗនេះ។ ចុះឈ្មោះឥឡូវនេះ ដើម្បីចូលបញ្ជីរង់ចាំ ហើយទទួលបានកន្លែងមុនគេ។</span><span class="en">Class dates will be announced soon. Register now to join the waiting list and get a seat first.</span></p>
+          </div>
           <input type="hidden" name="from" id="f-from">
           <input type="hidden" name="device" id="f-device">
           <input type="hidden" name="type" value="register">
@@ -650,7 +658,8 @@ footer small{color:var(--muted);font-size:13px}
         <div class="thanks" id="reg-thanks" hidden>
           <form style="display:grid;gap:14px" onsubmit="return false">
             <h3><span class="km">អរគុណ <span class="who"></span>!</span><span class="en">Thank you, <span class="who"></span>!</span></h3>
-            <p><span class="km">យើងបានទទួលការចុះឈ្មោះរបស់អ្នកហើយ។ យើងនឹងទាក់ទងអ្នកវិញឆាប់ៗនេះ។ ចង់និយាយឥឡូវនេះ? ផ្ញើសារមក Telegram។</span><span class="en">We've got your registration and will contact you soon. Want to talk now? Message us on Telegram.</span></p>
+            <p class="ty-booked" hidden><span class="km">អ្នកបានកក់កន្លែងក្នុងថ្នាក់ <b class="ty-class"></b> រួចហើយ។ យើងនឹងផ្ញើព័ត៌មានថ្នាក់ទៅអ៊ីមែលរបស់អ្នក។ ចង់និយាយឥឡូវនេះ? ផ្ញើសារមក Telegram។</span><span class="en">Your seat in the <b class="ty-class"></b> class is booked. We'll email you the class details. Want to talk now? Message us on Telegram.</span></p>
+            <p class="ty-wait"><span class="km">អ្នកស្ថិតក្នុងបញ្ជីរង់ចាំហើយ។ ពេលកាលបរិច្ឆេទថ្នាក់ត្រូវបានកំណត់ ឬមានកន្លែងទំនេរ យើងនឹងទាក់ទងអ្នកមុនគេ។ ចង់និយាយឥឡូវនេះ? ផ្ញើសារមក Telegram។</span><span class="en">You're on the waiting list. When the class date is set or a seat opens, we'll contact you first. Want to talk now? Message us on Telegram.</span></p>
             <a class="btn btn-gold" href="https://t.me/ungsambath" target="_blank" rel="noopener">Telegram @ungsambath</a>
           </form>
         </div>
@@ -709,12 +718,35 @@ footer small{color:var(--muted);font-size:13px}
     try{form.from.value=window.MAF_FROM||'';form.device.value=window.MAF_DEVICE||''}catch(e2){}
     var data=new URLSearchParams(new FormData(form)).toString();
     if(window.mafEvent)mafEvent('sign_up',{method:form.heard?form.heard.value:'',source:window.MAF_FROM||''});
+    var opt=form['class'].options[form['class'].selectedIndex], waitOpt=!opt||opt.dataset.wait==='1';
+    document.querySelector('.ty-booked').hidden=waitOpt;document.querySelector('.ty-wait').hidden=!waitOpt;
+    document.querySelectorAll('.ty-class').forEach(function(b){b.textContent=opt?opt.dataset.date||'':''});
     var show=function(){document.querySelectorAll('.who').forEach(function(w){w.textContent=name});form.hidden=true;thanks.hidden=false};
     // Sends the registration to Sambath's Google Sheet + Telegram (Apps Script web app).
     var REG_URL=window.MAF_API||'';
     if(REG_URL){fetch(REG_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data}).then(show,show);}
     else{fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data}).then(show,show);}
   });
+})();
+
+/* ===== load class dates and seats left ===== */
+(function(){
+  var sel=document.getElementById('f-class'), hint=document.getElementById('class-hint');
+  if(!sel||!window.MAF_API)return;
+  fetch(window.MAF_API).then(function(r){return r.json()}).then(function(d){
+    var open=(d.classes||[]).filter(function(c){return c.open});
+    if(!open.length)return;
+    var first=null;
+    open.forEach(function(c){
+      var o=document.createElement('option');o.value=c.name;o.dataset.date=c.date;
+      if(c.left>0){o.textContent=c.date+' · '+c.left+' seats left · នៅសល់ '+c.left+' កន្លែង';if(!first)first=o}
+      else{o.textContent=c.date+' · FULL – join waiting list · ពេញ – ចូលបញ្ជីរង់ចាំ';o.dataset.wait='1'}
+      sel.appendChild(o);
+    });
+    var wl=sel.querySelector('option[value=""]');if(wl){sel.appendChild(wl);wl.textContent='Not sure yet – waiting list · មិនទាន់ប្រាកដ – បញ្ជីរង់ចាំ'}
+    if(first)first.selected=true;
+    if(hint)hint.hidden=true;
+  }).catch(function(){});
 })();
 
 /* ===== count video plays ===== */
@@ -738,7 +770,7 @@ footer small{color:var(--muted);font-size:13px}
 
   // preview switch: Strong / Smooth
   var sw=document.createElement('div');sw.className='motion-switch';sw.setAttribute('role','group');sw.setAttribute('aria-label','Animation preview');
-  sw.innerHTML='<span>ANIMATION</span><button type="button" id="mo-strong" data-m="strong">Strong</button><button type="button" id="mo-smooth" data-m="smooth">Smooth</button>';
+  sw.innerHTML='<span>VIEW</span><button type="button" id="mo-strong" data-m="strong">Desktop</button><button type="button" id="mo-smooth" data-m="smooth">Mobile</button>';
   document.body.appendChild(sw);
   /* hide the switch while the register form is on screen, so it never covers the Send button */
   var rf=document.getElementById('register');
