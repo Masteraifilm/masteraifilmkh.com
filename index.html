@@ -305,6 +305,7 @@ input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 
 .pay{display:grid;gap:14px;border:1px solid var(--line);border-radius:10px;padding:18px;background:var(--ink)}
 .pay-head{display:flex;gap:12px;align-items:flex-start}
 .pay-head b{display:block;font-size:17px}.pay-head small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.pay-done{margin:4px 0 0;color:var(--muted);font-size:14px;line-height:1.6;border-top:1px dashed var(--line);padding-top:12px}
 .pay-step{flex:none;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--on-gold);display:grid;place-items:center;font-weight:800}
 .qr{background:#fff;border-radius:12px;padding:12px;width:min(260px,100%);margin:0 auto;position:relative}
 .qr img{width:100%;height:auto;display:block;border-radius:6px}
@@ -781,9 +782,7 @@ footer small{color:var(--muted);font-size:13px}
               <p class="pay-tip"><span class="km">ប្រើទូរស័ព្ទ? រក្សាទុក QR → បើក ABA → Scan → ជ្រើសរូបពីអាល់ប៊ុម</span><span class="en">On your phone? Save the QR → open ABA → Scan → choose the photo from your gallery</span></p>
               <p class="pay-acc"><span class="km">ឬផ្ទេរទៅគណនី ABA (USD)៖</span><span class="en">Or transfer to ABA (USD):</span> <b>000 610 197</b> · UNG SAMBATH <button type="button" class="copy-acc" data-copy="000610197">Copy</button></p>
               <p class="pay-ref"><span class="km">សូមសរសេរលេខនេះក្នុងចំណាំបង់ប្រាក់៖</span><span class="en">Write this code in the payment note:</span> <b id="pay-ref">—</b></p>
-              <div class="pay-head"><span class="pay-step">2</span><div><b><span class="km">ផ្ញើរូបថតវិក្កយបត្រ</span><span class="en">Send your payment receipt</span></b><small><span class="km">ថតអេក្រង់ការបង់ប្រាក់ ហើយផ្ញើនៅទីនេះ</span><span class="en">Take a screenshot of the payment and upload it here</span></small></div></div>
-              <label class="btn btn-ghost up-btn"><input type="file" id="receipt" accept="image/*" hidden><span class="km">📎 ជ្រើសរូបវិក្កយបត្រ</span><span class="en">📎 Upload receipt</span></label>
-              <p class="up-status" id="up-status" hidden></p>
+              <p class="pay-done"><span class="km">ពេលយើងទទួលបានប្រាក់ យើងនឹងបញ្ជាក់កន្លែងរបស់អ្នក តាម Telegram ឬអ៊ីមែល។</span><span class="en">Once we receive your payment, we'll confirm your seat on Telegram or by email.</span></p>
             </div>
             <a class="btn btn-gold" href="https://t.me/ungsambath" target="_blank" rel="noopener">Telegram @ungsambath</a>
           </form>
