@@ -835,14 +835,17 @@ footer small{color:var(--muted);font-size:13px}
   });
 
   var form=document.getElementById('reg-form'), err=document.getElementById('f-err'), thanks=document.getElementById('reg-thanks');
+  var sending=false;
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    if(sending)return;
     var name=form.name.value.trim(), phone=form.phone.value.replace(/\D/g,''), email=form.email.value.trim();
     var ok=name.length>1 && phone.length>=8 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     err.hidden=ok; if(!ok) return;
     try{form.from.value=window.MAF_FROM||'';form.device.value=window.MAF_DEVICE||'';
       if(!form.ref.value){form.ref.value='MAF-'+Math.random().toString(36).slice(2,7).toUpperCase()}
       document.getElementById('pay-ref').textContent=form.ref.value;window.MAF_REG={ref:form.ref.value,name:name,phone:phone}}catch(e2){}
+    sending=true;var btn=form.querySelector('button[type=submit]');if(btn){btn.disabled=true;btn.style.opacity='.6';btn.dataset.html=btn.innerHTML;btn.textContent='កំពុងផ្ញើ… · Sending…'}
     var data=new URLSearchParams(new FormData(form)).toString();
     if(window.mafEvent)mafEvent('sign_up',{method:form.heard?form.heard.value:'',source:window.MAF_FROM||''});
     var opt=form['class'].options[form['class'].selectedIndex], waitOpt=!opt||opt.dataset.wait==='1';
