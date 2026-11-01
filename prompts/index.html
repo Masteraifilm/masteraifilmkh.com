@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Photo Prompts · Master AI Film</title>
+<meta name="description" content="Free AI photo prompts with your own face: ChatGPT, Nano Banana (Gemini), Seedream. Prompt រូបភាព AI ដោយមុខរបស់អ្នក។">
+<meta property="og:title" content="AI Photo Prompts · Master AI Film with Claude">
+<meta property="og:description" content="Copy the prompt, upload your face, get the same picture. ចម្លង Prompt បញ្ចូលរូបមុខ ទទួលបានរូបដូចគ្នា។">
+<meta property="og:image" content="https://masteraifilmkh.com/img/prompts/ash-front-man.jpg">
+<script>
+var MAF_GA_ID='G-0WHTWH1BJ1';
+var MAF_API='https://script.google.com/macros/s/AKfycbweAhG9dk4ONNVjBIqixVHxssHLpowmJQz_tn6wnMyqBKff_z9ICvH-xLrB7qw_Rad8/exec';
+(function(){
+  var q=new URLSearchParams(location.search), src=(q.get('from')||q.get('utm_source')||'').toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,30);
+  try{if(src){localStorage.setItem('maf-from',JSON.stringify({v:src,t:Date.now()}))}
+    var saved=JSON.parse(localStorage.getItem('maf-from')||'null');if(saved&&Date.now()-saved.t<30*864e5){src=saved.v}}catch(e){}
+  if(!src){var r=document.referrer;src=!r?'direct':/facebook|fb\./.test(r)?'facebook':/tiktok/.test(r)?'tiktok':/t\.me|telegram/.test(r)?'telegram':/google\./.test(r)?'google':/masteraifilmkh|netlify/.test(r)?'website':'other'}
+  window.MAF_FROM=src;
+  window.MAF_DEVICE=/iPad|Tablet/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Macintosh/.test(navigator.userAgent))?'Tablet':/Mobi|Android|iPhone/i.test(navigator.userAgent)?'Phone':'Desktop';
+  var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+MAF_GA_ID;document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',MAF_GA_ID,{campaign_source:src});
+  window.mafEvent=function(n,p){try{gtag('event',n,p||{})}catch(e){}};
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&family=IBM+Plex+Mono:wght@400;500&family=Kantumruy+Pro:wght@400;500;700&display=swap">
+<style>
+:root{--ink:#0E0F12;--ink-2:#15171C;--ink-3:#1D2027;--line:rgba(244,241,234,.13);--paper:#F4F1EA;--muted:#ABA79E;--gold:#F2A541;--on-gold:#1A1408;
+  --body:'Kantumruy Pro','Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace}
+*{box-sizing:border-box}
+html{background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+html[lang=km] .en,html[lang=en] .km{display:none}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(14,15,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 15px/1 'Archivo';letter-spacing:.04em}
+.brand small{display:block;font:500 11px/1.4 'Archivo';color:var(--gold);letter-spacing:0}
+.brand svg{width:34px;height:30px}
+.hdr-r{display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{all:unset;cursor:pointer;padding:6px 11px;border-radius:999px;font:500 13px var(--body)}
+.lang button[aria-pressed=true]{background:var(--paper);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:12px 18px;font:700 15px var(--body);text-decoration:none;cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:var(--on-gold)}
+.btn-ghost{background:transparent;color:var(--paper);border:1px solid var(--line)}
+.hero{padding:56px 0 28px}
+.label{font:500 13px var(--mono);letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.2;margin:14px 0 12px}
+.lead{color:var(--muted);max-width:720px;font-size:17px;margin:0}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.how div{background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px}
+.how b{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--on-gold);margin-right:8px;font-size:14px}
+.tools{margin-top:14px;color:var(--muted);font-size:14px}
+.grid{columns:3 340px;column-gap:18px;padding:22px 0 40px}
+.pc{break-inside:avoid;margin:0 0 18px;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.pc figure{margin:0;position:relative;background:#000}
+.pc img{display:block;width:100%;height:auto}
+.pc .ar{position:absolute;right:10px;top:10px;font:500 11px var(--mono);background:rgba(0,0,0,.6);padding:4px 8px;border-radius:4px}
+.pc-body{padding:14px 16px 16px}
+.pc h3{margin:0 0 4px;font-size:19px;line-height:1.35}
+.up{margin:0 0 10px;color:var(--muted);font-size:13px}
+.pbox{position:relative;border:1px solid var(--line);border-radius:10px;background:#0a0b0e;overflow:hidden}
+.pbox pre{margin:0;padding:12px;font:400 12px/1.55 var(--mono);color:#d9d4cb;white-space:pre-wrap;word-break:break-word;max-height:220px;overflow:auto}
+.pbox.locked pre{max-height:110px;overflow:hidden;filter:blur(3.5px);user-select:none;pointer-events:none}
+.unlock-btn{display:none}
+.pbox.locked .unlock-btn{display:flex;position:absolute;inset:auto 0 0 0;margin:auto;top:0;width:max-content;height:max-content;padding:11px 16px;border-radius:10px;border:0;background:var(--gold);color:var(--on-gold);font:700 14px var(--body);cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.copy-btn{margin-top:10px;width:100%;padding:11px;border-radius:10px;border:1px solid var(--gold);background:transparent;color:var(--gold);font:700 14px var(--body);cursor:pointer}
+.copy-btn[disabled]{opacity:.35;cursor:not-allowed}
+.copy-btn.done{background:var(--gold);color:var(--on-gold)}
+.cta{margin:10px 0 60px;border:2px solid var(--gold);border-radius:16px;padding:24px;background:rgba(242,165,65,.07);display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta h2{margin:0;font-size:24px}.cta p{margin:4px 0 0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:13px}
+/* unlock dialog */
+.dlg{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:16px}
+.dlg.open{display:flex}
+.dlg form{width:min(420px,100%);background:var(--ink-3);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:12px}
+.dlg h3{margin:0;font-size:21px}.dlg p{margin:0;color:var(--muted);font-size:14px}
+.dlg label{font-size:14px;font-weight:700}
+.dlg input{width:100%;margin-top:6px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--ink);color:var(--paper);font:16px var(--body)}
+.dlg .err{color:#ff8a7a;font-size:13px}
+.dlg .row{display:flex;gap:10px}.dlg .row .btn{flex:1}
+@media (max-width:760px){.how{grid-template-columns:1fr}.hero{padding-top:36px}.brand span.t{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="/"><svg viewBox="20 30 160 155" aria-hidden="true"><defs><pattern id="st" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="28" height="28" fill="#F2A541"/><rect x="14" width="14" height="28" fill="#0E0F12"/></pattern></defs><rect x="26" y="92" width="148" height="86" rx="10" fill="#F2A541"/><path d="M86 112 L86 158 L126 135 Z" fill="#0E0F12" stroke="#0E0F12" stroke-width="6" stroke-linejoin="round"/><rect x="26" y="70" width="148" height="18" rx="3" fill="url(#st)" stroke="#F2A541" stroke-width="3"/><g transform="rotate(-20 30 66)"><rect x="26" y="46" width="148" height="18" rx="3" fill="url(#st)" stroke="#F2A541" stroke-width="3"/></g><circle cx="31" cy="67" r="7" fill="#F2A541" stroke="#0E0F12" stroke-width="3"/></svg><span class="t">MASTER AI FILM<small>with Claude</small></span></a>
+  <div class="hdr-r"><div class="lang" role="group"><button type="button" data-set="km" aria-pressed="true">ខ្មែរ</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
+  <a class="btn btn-gold" href="/#register"><span class="km">ចុះឈ្មោះ</span><span class="en">Register</span></a></div>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="label"><span class="km">Prompt ឥតគិតថ្លៃ</span><span class="en">Free prompts</span></div>
+    <h1><span class="km">បង្កើតរូបដូចនេះ ដោយមុខរបស់អ្នកផ្ទាល់</span><span class="en">Make these pictures with your own face</span></h1>
+    <p class="lead"><span class="km">រូបទាំងអស់នេះ បង្កើតដោយ AI ១០០%។ ចម្លង Prompt បញ្ចូលរូបមុខរបស់អ្នក ហើយ AI នឹងបង្កើតរូបដូចគ្នា។</span><span class="en">Every picture here is 100% AI. Copy the prompt, upload your own face photo, and the AI makes the same picture of you.</span></p>
+    <div class="how">
+      <div><b>1</b><span class="km">បើក ChatGPT, Gemini ឬ Seedream</span><span class="en">Open ChatGPT, Gemini or Seedream</span></div>
+      <div><b>2</b><span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក (មើលត្រង់)</span><span class="en">Upload 1 clear photo of your face (looking straight)</span></div>
+      <div><b>3</b><span class="km">ចម្លង Prompt ប្តូរពាក្យក្នុង [ ] ហើយផ្ញើ</span><span class="en">Paste the prompt, fill in the [ ] parts, send</span></div>
+    </div>
+    <p class="tools"><span class="km">ប្រើបានជាមួយ</span><span class="en">Works with</span>: ChatGPT · Nano Banana (Gemini) · Seedream 5.0 Pro. <span class="km">Nano Banana មិនស្គាល់ --ar ទេ សូមជ្រើសទំហំរូបក្នុងកម្មវិធី។</span><span class="en">Nano Banana ignores --ar, so pick the picture size in the app.</span></p>
+  </section>
+
+  <section class="grid">
+  <article class="pc" id="sweater-garden">
+    <figure><img src="../img/prompts/sweater-garden.jpg" alt="Golden hour garden portrait" width="900" height="1200" loading="eager"><span class="ar">3:4</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">រូបថតសួនច្បារ ពេលល្ងាច</span><span class="en">Golden hour garden portrait</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Head-and-shoulders portrait, the person turns the body slightly away and looks back over the shoulder straight into the lens, calm soft half-smile.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing. A few natural freckles on the cheeks are fine.
+HAIR: long, loose and natural, a few flyaway strands lit from behind.
+OUTFIT: chunky cream wool turtleneck sweater with visible knit texture; small pearl drop earring.
+SETTING: garden at sunset, dark green leaves and small white flowers on the right, soft warm bokeh circles in the background.
+LIGHTING: low golden-hour sun 3000K from behind-left as a rim light on the hair and shoulder; soft bounce fill on the face so both eyes are clear.
+CAMERA: Canon EOS R5, 85mm f/1.4 at f/1.8, 1/500s, ISO 100. Eyes sharp, background melted.
+CONDITION: fine film grain, gentle warm halation, soft vignette.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no heavy makeup.
+--ar 3:4</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="sweater-garden"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="half-light">
+    <figure><img src="../img/prompts/half-light.jpg" alt="Half-lit studio portrait" width="800" height="1200" loading="eager"><span class="ar">2:3</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">រូបថតពន្លឺពាក់កណ្តាលមុខ</span><span class="en">Half-lit studio portrait</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Straight-on head-and-shoulders portrait, face to camera, calm serious expression, eyes looking into the lens.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing. No makeup look.
+HAIR: loose, centre parting, falling over one shoulder; backlit strands glowing.
+OUTFIT: bare shoulders (simple, nothing visible at the frame edge).
+SETTING: plain dark brown-charcoal studio backdrop (not pure black).
+LIGHTING: one warm 3200K key light from camera left lights half the face (Rembrandt style); weak fill on the shadow side so the second eye is still readable; warm hair rim light from behind-left.
+CAMERA: Sony A7R V, 105mm f/2.8 at f/4, 1/200s, ISO 200.
+CONDITION: low-key, fine grain, smooth falloff into shadow.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no face fully in shadow.
+--ar 2:3</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="half-light"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="horror-clown">
+    <figure><img src="../img/prompts/horror-clown.jpg" alt="Horror clown with lighter" width="675" height="1200" loading="lazy"><span class="ar">9:16</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">តួតុក្កតាគួរឲ្យខ្លាច</span><span class="en">Horror clown with lighter</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Medium close-up, the person faces the camera with a slow creepy smile, holding a lit metal lighter close to the lens on the left of the frame.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+MAKEUP: thin cracked white clown greasepaint (real skin texture and the person&#x27;s features still show through), two red vertical lines through the eyes, red lines from the eyes curving to the corners of the mouth, round red nose, dark shadow around the eyes.
+OUTFIT: dirty torn cream lace ruffled collar, dark velvet clown suit with two big red pom-poms.
+SETTING: abandoned attic, spider webs, old red-painted wooden beam on the left, round window with a full moon top right.
+LIGHTING: warm 1800K lighter flame lighting one side of the face; cold 7500K moonlight rim from the window behind.
+CAMERA: Canon R5, 50mm f/1.4 at f/2, 1/125s, ISO 1600.
+CONDITION: dark horror-film grade, fine grain, floating dust in the light.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, paint not too thick, no blood on the face.
+--ar 9:16</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="horror-clown"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="rain-spirit">
+    <figure><img src="../img/prompts/rain-spirit.jpg" alt="Rainy night with a guardian spirit" width="800" height="1200" loading="lazy"><span class="ar">2:3</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">យប់ភ្លៀង និងវិញ្ញាណការពារ</span><span class="en">Rainy night with a guardian spirit</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>STEP 1 (upload your face photo):
+Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Full body, the person sits on a wet wooden park bench at night, one leg crossed, head slightly down, one hand resting on the forehead ABOVE the eyebrows, face turned three-quarters toward the camera so both eyes are visible, sad tired look. Leave empty space above and behind the right shoulder.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing. Wet skin and wet hair from the rain.
+OUTFIT: blue-and-white striped shirt with sleeves rolled up, dark jeans, worn white sneakers.
+SETTING: park path at night in heavy rain, warm street lamps in a row, reflections on the wet ground.
+LIGHTING: 2700K orange lamps from the left, rain lit as bright streaks.
+CAMERA: Sony A7 IV, 50mm f/1.4, 1/250s, ISO 3200.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands.
+--ar 2:3
+
+STEP 2 (upload the result from step 1):
+Edit this image. Keep the man exactly as he is. Add a large glowing blue spirit of the same person standing behind the bench, made of translucent blue mist and smoke, eyes closed, one hand resting gently on his shoulder, fading into smoke below the waist. Blue 9000K glow, rain passing through the spirit.</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="rain-spirit"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="moon-hand">
+    <figure><img src="../img/prompts/moon-hand.jpg" alt="Holding the moon above the clouds" width="900" height="1200" loading="lazy"><span class="ar">3:4</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">កាន់ព្រះចន្ទលើពពក</span><span class="en">Holding the moon above the clouds</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Waist-up, camera directly in front, the person looks calmly into the lens and holds out one open hand; a glowing full moon floats just above the palm.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: plain dark navy hoodie with drawstrings, no logo.
+SETTING: standing above a sea of clouds at night; the Milky Way across the starry sky; a thin orange sunset line on the horizon at the left.
+LIGHTING: soft white-blue light from the moon onto the hand and the side of the face; cool 7000K starlight rim; warm orange glow from the horizon.
+CAMERA: Nikon Z8, 50mm f/1.8 at f/2.8, 1/100s, ISO 800.
+CONDITION: clean, deep blue night grade, fine grain.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, moon must not cover the face.
+--ar 3:4</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="moon-hand"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="water-body">
+    <figure><img src="../img/prompts/water-body.jpg" alt="Water instead of a body" width="800" height="1200" loading="lazy"><span class="ar">2:3</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ទឹកជំនួសខ្លួន</span><span class="en">Water instead of a body</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Front view, waist-up, the person drinks from a clear plastic water bottle held at the corner of the mouth (bottle tilted away so the face stays visible), other hand in the jeans pocket, looking at the camera.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: black T-shirt with thin grey vertical stripes, blue jeans, brown leather belt, wrist watch.
+SURREAL EFFECT: the stomach between the shirt hem and the jeans waistband is missing; a twisting column of clear water pours down from inside the shirt into the jeans, with frozen splashes and droplets flying out.
+SETTING: grey textured concrete studio wall.
+LIGHTING: soft 5500K key light from the front-left, small rim light to make the water sparkle.
+CAMERA: Canon R5, 70mm f/4, 1/500s, ISO 200, frozen motion.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no logo on the bottle.
+--ar 2:3</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="water-body"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="villa-boss">
+    <figure><img src="../img/prompts/villa-boss.jpg" alt="The boss at the villa" width="800" height="1200" loading="lazy"><span class="ar">2:3</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ថៅកែនៅវីឡា</span><span class="en">The boss at the villa</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Wide-medium, camera at eye level in front, the person sits relaxed on a big beige outdoor sofa, arms spread on the backrest, one leg crossed, confident calm look into the lens.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: white linen shirt with rolled sleeves, beige trousers, black socks, shiny black shoes, silver watch.
+SETTING: luxury villa terrace at sunset; marble steps and a tall glass-and-iron door behind; two bodyguards in black suits and sunglasses standing behind the sofa; black SUVs with headlights on; glass table in front with a laptop seen from behind (plain silver lid, no logo), a whisky decanter and glass, folders.
+LIGHTING: golden-hour sun 2800K from behind, warm wall lanterns, soft fill on the face.
+CAMERA: Sony A7R V, 50mm f/2, 1/500s, ISO 100.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, bodyguards must not look like the main person.
+--ar 2:3</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="villa-boss"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="orange-wall">
+    <figure><img src="../img/prompts/orange-wall.jpg" alt="Orange wall with window shadows" width="800" height="1200" loading="lazy"><span class="ar">2:3</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ជញ្ជាំងទឹកក្រូច និងស្រមោលបង្អួច</span><span class="en">Orange wall with window shadows</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Chest-up portrait, body slightly turned, face three-quarters, looking up and away to the side, thoughtful.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: thin metal aviator-style round glasses, black ribbed turtleneck, dark brown wool coat.
+SETTING: textured bright orange plaster wall.
+LIGHTING: hard low sun 3200K through a window, casting sharp diagonal window-frame shadows across the wall and part of the coat; face fully in the light.
+CAMERA: Fujifilm GFX 100S, 80mm f/2.8, 1/250s, ISO 100.
+CONDITION: rich warm colors, crisp detail, slight grain.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no reflections hiding the eyes.
+--ar 2:3</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="orange-wall"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="mini-me-chase">
+    <figure><img src="../img/prompts/mini-me-chase.jpg" alt="Chasing the mini me" width="900" height="1200" loading="lazy"><span class="ar">3:4</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ដេញចាប់ខ្លួនឯងតូច</span><span class="en">Chasing the mini me</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face. The SAME person appears twice.
+
+SHOT: Low wide-angle, fun action. In the back, the person runs toward the camera reaching one hand forward. In the front, a tiny chibi version of the same person (big head, small body, same face and clothes) runs away scared, mouth open, holding a takeaway food box, rice grains flying.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+OUTFIT (both): beige overshirt over a white T-shirt, dark jeans, white sneakers, black backpack, black watch.
+SETTING: city sidewalk outside [your shop or restaurant name] with a gold sign, warm lanterns inside, green trees, sun flare, wet shiny pavement.
+LIGHTING: bright afternoon sun 5000K from behind with lens flare, fill on both faces.
+CAMERA: 24mm f/2.8, 1/1000s, ISO 200, motion frozen.
+NO EXTRA: no extra people in focus, no extra fingers, no text except &quot;[your shop name]&quot;.
+--ar 3:4</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="mini-me-chase"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="hope-letters">
+    <figure><img src="../img/prompts/hope-letters.jpg" alt="Portrait inside big letters" width="900" height="900" loading="lazy"><span class="ar">1:1</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">រូបនៅក្នុងអក្សរធំ</span><span class="en">Portrait inside big letters</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+DESIGN: Square poster. A big bold word &quot;[YOUR WORD, e.g. HOPE]&quot; cut out of a glowing orange paper sheet; the portrait shows through the letters only, like a window.
+SHOT (inside the letters): close-up face looking into the camera, soft confident smile, head slightly tilted.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing. Light freckles are fine.
+HAIR: long and loose, blowing softly, backlit golden strands.
+SETTING inside: golden sunlight, small white wildflowers bottom right, sparkles.
+LIGHTING: warm 3000K backlight, soft front fill.
+CAMERA: 85mm f/1.8.
+CONDITION: paper edges with a slight 3D shadow, orange gradient background.
+NO EXTRA: no other text, no logo, no watermark, no plastic skin.
+--ar 1:1</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="hope-letters"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="sky-low-angle">
+    <figure><img src="../img/prompts/sky-low-angle.jpg" alt="Low angle under the sun" width="900" height="1125" loading="lazy"><span class="ar">4:5</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ថតពីក្រោម ពន្លឺថ្ងៃ</span><span class="en">Low angle under the sun</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Low angle from below, medium shot, the person turns back toward the camera over the shoulder, soft confident smile, face fully visible.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+HAIR: long, loose, blowing in the wind, glowing at the edges.
+OUTFIT: fitted beige ribbed knit sweater, dark high-waist jeans.
+SETTING: bright blue sky with big white clouds; the sun just behind the head.
+LIGHTING: strong 5500K backlight sun with flare and hair glow; soft fill on the face so it is not dark.
+CAMERA: Canon R6, 35mm f/2, 1/2000s, ISO 100.
+CONDITION: warm summer colors, lens flare, light grain.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands.
+--ar 4:5</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="sky-low-angle"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="paper-bust">
+    <figure><img src="../img/prompts/paper-bust.jpg" alt="Low-poly paper sculpture" width="900" height="1125" loading="lazy"><span class="ar">4:5</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">រូបចម្លាក់ក្រដាស</span><span class="en">Low-poly paper sculpture</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Three-quarter view of a head-and-shoulders bust sculpture of the person, looking up and to the side.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+STYLE: the whole bust is made of folded low-poly paper; the face keeps real skin color and detail but shows faint triangle fold lines; the hair is made of sharp black paper spikes; the shirt is dark grey folded card with two silver snap buttons.
+SETTING: plain mid-grey studio background, bust standing on a grey table.
+LIGHTING: soft 5500K key light from the left, gentle shadows inside the folds.
+CAMERA: Sony A7R V, 90mm f/5.6, 1/125s, ISO 100. Everything sharp.
+NO EXTRA: no text, no logo, no watermark, no extra objects.
+--ar 4:5</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="paper-bust"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="bw-orange-glasses">
+    <figure><img src="../img/prompts/bw-orange-glasses.jpg" alt="Black &amp; white with color glasses" width="900" height="1125" loading="lazy"><span class="ar">4:5</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ខ្មៅស និងវ៉ែនតាពណ៌</span><span class="en">Black &amp; white with color glasses</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Head-and-shoulders portrait, face to camera, slight head tilt, serious confident look.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: gold aviator sunglasses with orange mirror lenses, white linen shirt with open collar.
+COLOR: the whole photo is black and white EXCEPT the lenses, which stay bright orange and reflect a city street at sunset.
+SETTING: pure black background.
+LIGHTING: 5500K key light from the front-right, soft fill, subtle rim on the hair.
+CAMERA: Hasselblad X2D, 90mm f/4, 1/160s, ISO 100.
+CONDITION: high-contrast monochrome, fine grain.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no color anywhere else.
+--ar 4:5</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="bw-orange-glasses"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="ash-side">
+    <figure><img src="../img/prompts/ash-side.jpg" alt="Turning into ash (side)" width="900" height="1125" loading="lazy"><span class="ar">4:5</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ក្លាយជាផេះ (ម្ខាង)</span><span class="en">Turning into ash (side)</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Side view facing right, head slightly bowed, eyes closed, calm.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+EFFECT: the back of the head, shoulder and arm break apart into black ash, ink-like smoke and flying fragments streaming to the left; burning orange cracks like burning paper on the shoulder; red embers in the air; a few small birds flying.
+OUTFIT: black sleeveless top.
+SETTING: dramatic cloudy sky, bright on the right behind the face, dark smoke bottom-left.
+LIGHTING: warm 3500K rim light along the face profile, ember glow on the cracks.
+CAMERA: 85mm f/2, 1/250s, ISO 400.
+CONDITION: movie-poster grade, black, white-grey and fiery orange.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, face stays clean (no ash on the face).
+--ar 4:5</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="ash-side"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="ash-front-man">
+    <figure><img src="../img/prompts/ash-front-man.jpg" alt="Smoke and fire hero" width="900" height="600" loading="lazy"><span class="ar">3:2</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">វីរបុរស ផ្សែង និងភ្លើង</span><span class="en">Smoke and fire hero</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Front-facing chest-up, camera straight on, cool determined stare into the lens.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing. Face 100% clean.
+EFFECT: hair tips break into a few ash particles; shoulders, chest and arms dissolve into black ash and ink smoke streaming to both sides; red-orange embers and burning cracks like burning paper.
+OUTFIT: black T-shirt.
+SETTING: bright misty halo behind the head, fading into dark smoke clouds.
+LIGHTING: soft key light on the face, warm ember rim light.
+CAMERA: 85mm f/2, 1/250s, ISO 400.
+CONDITION: superhero movie poster; black, white-grey and fiery orange.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands. Keep 70% of the body solid, only the edges dissolve.
+--ar 3:2</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="ash-front-man"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="ash-front-woman">
+    <figure><img src="../img/prompts/ash-front-woman.jpg" alt="Smoke and fire heroine" width="900" height="1125" loading="lazy"><span class="ar">4:5</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">វីរនារី ផ្សែង និងភ្លើង</span><span class="en">Smoke and fire heroine</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Front-facing chest-up, camera straight on, calm strong stare into the lens.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing. Face 100% clean.
+HAIR: loose and blowing to one side, the ends turning into ash.
+EFFECT: shoulders and arms dissolve into black ash with glowing red-orange cracks and embers, smoke rising around.
+OUTFIT: black tank top.
+SETTING: bright glowing halo behind the head, dark smoke clouds around.
+LIGHTING: soft key light on the face, warm ember rim light.
+CAMERA: 85mm f/2, 1/250s, ISO 400.
+CONDITION: movie poster; black, grey and fiery orange.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands. Keep 70% of the body solid.
+--ar 4:5</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="ash-front-woman"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="grunge-collage">
+    <figure><img src="../img/prompts/grunge-collage.jpg" alt="Street-style double collage" width="900" height="1125" loading="lazy"><span class="ar">4:5</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">កូឡាជ ស្ទាយផ្លូវ</span><span class="en">Street-style double collage</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face. The SAME person appears twice.
+
+DESIGN: Poster collage on a dark cracked concrete wall.
+LEFT: big close-up of the person, three-quarter view looking away, silver aviator sunglasses reflecting a sunset city skyline; the bottom of the portrait breaks into white grunge paint brush strokes and splashes.
+RIGHT: smaller full-body shot of the same person walking toward the camera, one hand on the shirt collar, the other in the pocket.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: open navy-and-white plaid flannel shirt, white T-shirt, silver chain, black cargo joggers, red-and-white high-top sneakers, silver watch.
+SETTING: wet reflective floor with warm light reflections.
+LIGHTING: warm 3200K side light, rim light on the hair.
+CAMERA: 85mm f/2 for the close-up, 35mm f/2.8 for the full body.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no logo on the sneakers.
+--ar 4:5</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="grunge-collage"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="sketch-real">
+    <figure><img src="../img/prompts/sketch-real.jpg" alt="Sketch and real side by side" width="800" height="1200" loading="lazy"><span class="ar">2:3</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">គំនូរ និងរូបពិត</span><span class="en">Sketch and real side by side</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face. The SAME person appears twice, standing side by side.
+
+LEFT: the person drawn as a white pencil/chalk sketch on black (rough line strokes, see-through).
+RIGHT: the real person, same pose and outfit, full color.
+POSE: full body, standing, legs crossed at the ankles, hands in pockets, calm look into the camera.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+HAIR: tied up under the cap (follow the cap style).
+OUTFIT: black cap, black hooded utility jacket open, black T-shirt, wide black cargo pants, black-and-white sneakers, black watch.
+SETTING: black studio, glossy black floor with reflections.
+LIGHTING: warm 3000K backlight glow behind the real person, soft key from the front.
+CAMERA: 50mm f/2.8, 1/160s, ISO 200.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no logo on the shoes.
+--ar 2:3</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="sketch-real"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  <article class="pc" id="floating-cubes">
+    <figure><img src="../img/prompts/floating-cubes.jpg" alt="Your skills in glass cubes" width="900" height="1200" loading="lazy"><span class="ar">3:4</span></figure>
+    <div class="pc-body">
+      <h3><span class="km">ជំនាញរបស់អ្នកក្នុងគូបកញ្ចក់</span><span class="en">Your skills in glass cubes</span></h3>
+      <p class="up"><b>📎</b> <span class="km">បញ្ចូលរូបមុខច្បាស់ ១សន្លឹក របស់អ្នក</span><span class="en">Upload 1 clear front photo of your face</span></p>
+      <div class="pbox locked"><pre>Use the person from the attached photo exactly: same face shape, eyebrows, eyes, nose, lips, jawline, any moles, skin tone and hairstyle. Do not change the identity. Do not copy any other person&#x27;s face.
+
+SHOT: Full body, camera in front at chest height, the person stands on one leg with the other foot crossed, both hands open as if presenting, calm look into the lens.
+FACE: [describe your own face in a few words, for example: oval face, thick straight eyebrows, dark brown almond eyes, soft rounded nose tip, full lips, light stubble, small mole on the left cheek]
+SKIN: [your skin tone, e.g. warm golden-tan], real skin texture with visible pores, fine lines, natural sheen, no airbrushing.
+OUTFIT: black bomber jacket, black T-shirt, black cargo pants, white chunky sneakers.
+EFFECT: six glowing transparent glass cubes float beside the person, each with a simple gold line icon inside: [choose 6 icons for your skills, e.g. brain, film clapper, camera, chef hat, noodle bowl, growth chart], with small sparkles.
+SETTING: rooftop terrace at sunset, city skyline and river behind, wet marble floor reflecting the sun, glowing step lights.
+LIGHTING: sunset 2800K from behind-left, soft fill on the face, cool glow from the cubes.
+CAMERA: Sony A7 IV, 35mm f/2.8, 1/250s, ISO 200.
+NO EXTRA: no text, no logo, no watermark, no plastic skin, no extra fingers, no distorted hands, no text in the cubes.
+--ar 3:4</pre>
+        <button class="unlock-btn" type="button"><span class="km">🔓 បើកមើល Prompt</span><span class="en">🔓 Unlock prompt</span></button></div>
+      <button class="copy-btn" type="button" data-id="floating-cubes"><span class="km">ចម្លង Prompt</span><span class="en">Copy prompt</span></button>
+    </div>
+  </article>
+  </section>
+
+  <section class="cta">
+    <div><h2><span class="km">ចង់បង្កើតជាខ្សែភាពយន្ត មិនមែនត្រឹមរូប?</span><span class="en">Want to make a whole movie, not just a picture?</span></h2>
+    <p><span class="km">វគ្គ Master AI Film with Claude · ថ្ងៃសៅរ៍ ១៤ និង ២៨ វិច្ឆិកា · $99 សម្រាប់សិស្ស ១០ នាក់ដំបូង</span><span class="en">Master AI Film with Claude · Saturday 14 &amp; 28 November · $99 for the first 10 students</span></p></div>
+    <a class="btn btn-gold" href="/#register"><span class="km">ចុះឈ្មោះចូលរៀន</span><span class="en">Join the class</span></a>
+  </section>
+</main>
+<footer><div class="wrap">masteraifilmkh.com · 067 775 755 · Telegram @ungsambath</div></footer>
+
+<div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t">
+  <form id="unlock-form" novalidate>
+    <h3 id="dlg-t"><span class="km">🔓 បើកមើល Prompt ទាំងអស់</span><span class="en">🔓 Unlock all prompts</span></h3>
+    <p><span class="km">ដាក់ឈ្មោះ និងលេខទូរស័ព្ទ ដើម្បីបើក Prompt ទាំង ១៩ ឥតគិតថ្លៃ។</span><span class="en">Enter your name and phone number to unlock all 19 prompts for free.</span></p>
+    <label><span class="km">ឈ្មោះ</span><span class="en">Name</span><input name="name" autocomplete="name" required></label>
+    <label><span class="km">លេខទូរស័ព្ទ</span><span class="en">Phone number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0xx xxx xxx" required></label>
+    <p class="err" id="u-err" hidden><span class="km">សូមដាក់ឈ្មោះ និងលេខទូរស័ព្ទឲ្យត្រឹមត្រូវ។</span><span class="en">Please enter your name and a valid phone number.</span></p>
+    <div class="row"><button class="btn btn-ghost" type="button" id="u-cancel"><span class="km">បិទ</span><span class="en">Close</span></button>
+    <button class="btn btn-gold" type="submit" id="u-go"><span class="km">បើកមើល</span><span class="en">Unlock</span></button></div>
+  </form>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, KEY='maf-prompts-unlocked';
+  /* language */
+  var lang='km';try{lang=localStorage.getItem('maf-lang')||'km'}catch(e){}
+  function setLang(l){root.lang=l;document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});try{localStorage.setItem('maf-lang',l)}catch(e){}}
+  setLang(lang);document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set)})});
+
+  var unlocked=false;try{unlocked=!!localStorage.getItem(KEY)}catch(e){}
+  var dlg=document.getElementById('dlg'),form=document.getElementById('unlock-form'),err=document.getElementById('u-err'),pending=null;
+  function apply(){document.querySelectorAll('.pbox').forEach(function(b){b.classList.toggle('locked',!unlocked)})}
+  apply();
+  function open(id){pending=id;dlg.classList.add('open');setTimeout(function(){form.name.focus()},50)}
+  function close(){dlg.classList.remove('open')}
+  document.getElementById('u-cancel').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  document.querySelectorAll('.unlock-btn').forEach(function(b){b.addEventListener('click',function(){open(b.closest('.pc').id)})});
+
+  var sending=false;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();if(sending)return;
+    var name=form.name.value.trim(),phone=form.phone.value.replace(/[^0-9+]/g,'');
+    var ok=name.length>1&&phone.replace(/\D/g,'').length>=8;err.hidden=ok;if(!ok)return;
+    sending=true;document.getElementById('u-go').disabled=true;
+    var body=new URLSearchParams({type:'unlock',name:name,phone:phone,prompt:pending||'',from:window.MAF_FROM||'',device:window.MAF_DEVICE||''}).toString();
+    var done=function(){unlocked=true;try{localStorage.setItem(KEY,JSON.stringify({name:name,t:Date.now()}))}catch(e){}apply();close();
+      if(window.mafEvent)mafEvent('prompt_unlock',{prompt:pending||''});
+      var c=document.getElementById(pending);if(c)c.scrollIntoView({block:'center'})};
+    try{fetch(MAF_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body,keepalive:true}).then(done,done)}catch(e2){done()}
+  });
+
+  document.querySelectorAll('.copy-btn').forEach(function(b){b.addEventListener('click',function(){
+    if(!unlocked){open(b.dataset.id);return}
+    var t=b.closest('.pc').querySelector('pre').textContent;
+    var ok=function(){b.classList.add('done');var h=b.innerHTML;b.innerHTML='✓ Copied · ចម្លងរួច';setTimeout(function(){b.classList.remove('done');b.innerHTML=h},1600)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){fallback(t);ok()})}else{fallback(t);ok()}
+    if(window.mafEvent)mafEvent('prompt_copy',{prompt:b.dataset.id});
+  })});
+  function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+})();
+</script>
+</body>
+</html>

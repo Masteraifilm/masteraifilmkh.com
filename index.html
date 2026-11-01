@@ -292,6 +292,15 @@ input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 
 .trust{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:10px 16px;border-radius:999px;background:rgba(14,15,18,.72);border:1px solid rgba(243,167,67,.55);color:var(--paper);text-decoration:none;font-size:15px;line-height:1.4;max-width:100%;backdrop-filter:blur(6px)}
 .trust b{color:var(--gold);font-weight:700}.trust .fb-ico{color:#4f8df5}.trust .go{color:var(--gold)}
 .trust:hover{border-color:var(--gold)}
+.pt-box{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--ink-2)}
+.pt-text h2{margin:12px 0 10px;font-size:clamp(26px,3.2vw,38px);line-height:1.2}
+.pt-text p{color:var(--muted);margin:0 0 18px}
+.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pt-pic{display:block;border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#000}
+.pt-pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.pt-pic:hover img{transform:scale(1.05)}
+@media (max-width:820px){.pt-box{grid-template-columns:1fr;padding:20px}.pt-grid{grid-template-columns:repeat(2,1fr)}}
+
 .m-br{display:none}@media (max-width:767px){.m-br{display:inline}.trust{border-radius:16px}}
 #reel3d .r3-step:last-of-type{margin-bottom:0}#reel3d+.strip-note{margin-top:14px}
 .owner-card{display:flex;align-items:center;gap:16px;margin:4px 0 22px;padding:16px 18px;border:2px solid var(--gold);border-radius:12px;background:rgba(243,167,67,.08);color:var(--paper);text-decoration:none;flex-wrap:wrap}
@@ -471,6 +480,7 @@ footer small{color:var(--muted);font-size:13px}
       <a href="#price"><span class="km">តម្លៃ</span><span class="en">Price</span></a>
       <a href="#teacher"><span class="km">គ្រូបង្វឹក</span><span class="en">Teacher</span></a>
       <a href="#faq"><span class="km">សំណួរ</span><span class="en">FAQ</span></a>
+      <a href="/prompts/"><span class="km">Prompt ឥតគិតថ្លៃ</span><span class="en">Free prompts</span></a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" id="lang-km" data-set="km" aria-pressed="true">ខ្មែរ</button>
@@ -542,6 +552,21 @@ footer small{color:var(--muted);font-size:13px}
           <video src="video/different-experiences.mp4" poster="video/different-experiences-cover.jpg" controls playsinline preload="none" width="720" height="1280"></video>
           <figcaption><b>DIFFERENT EXPERIENCES</b><span class="km">វីដេអូខ្លី បង្កើតដោយ AI</span><span class="en">AI short video</span></figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE PROMPTS TEASER -->
+  <section class="pteaser" style="padding-top:0">
+    <div class="wrap">
+      <div class="pt-box">
+        <div class="pt-text">
+          <div class="label"><span class="km">Prompt ឥតគិតថ្លៃ</span><span class="en">Free prompts</span></div>
+          <h2><span class="km">បង្កើតរូបទាំងនេះ ដោយមុខរបស់អ្នកផ្ទាល់</span><span class="en">Make these pictures with your own face</span></h2>
+          <p><span class="km">Prompt ១៩ ដែលប្រើបានភ្លាមៗ ជាមួយ ChatGPT, Gemini និង Seedream។ ចម្លង បញ្ចូលរូបមុខ ហើយរួចរាល់។</span><span class="en">19 ready-to-use prompts for ChatGPT, Gemini and Seedream. Copy, add your face photo, done.</span></p>
+          <a class="btn btn-gold" href="/prompts/"><span class="km">មើល Prompt ទាំងអស់ →</span><span class="en">See all prompts →</span></a>
+        </div>
+        <div class="pt-grid"><a class="pt-pic" href="/prompts/#horror-clown"><img src="img/prompts/horror-clown.jpg" alt="Horror clown" loading="lazy"></a><a class="pt-pic" href="/prompts/#ash-front-man"><img src="img/prompts/ash-front-man.jpg" alt="Smoke and fire hero" loading="lazy"></a><a class="pt-pic" href="/prompts/#moon-hand"><img src="img/prompts/moon-hand.jpg" alt="Holding the moon" loading="lazy"></a><a class="pt-pic" href="/prompts/#hope-letters"><img src="img/prompts/hope-letters.jpg" alt="Portrait inside letters" loading="lazy"></a></div>
       </div>
     </div>
   </section>
