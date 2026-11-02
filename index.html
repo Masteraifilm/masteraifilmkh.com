@@ -292,6 +292,9 @@ input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 
 .trust{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:10px 16px;border-radius:999px;background:rgba(14,15,18,.72);border:1px solid rgba(243,167,67,.55);color:var(--paper);text-decoration:none;font-size:15px;line-height:1.4;max-width:100%;backdrop-filter:blur(6px)}
 .trust b{color:var(--gold);font-weight:700}.trust .fb-ico{color:#4f8df5}.trust .go{color:var(--gold)}
 .trust:hover{border-color:var(--gold)}
+.yt-btn{margin-top:18px;align-self:flex-start;justify-self:start;width:auto}.yt-btn svg{flex:none}
+.yt-fig a{display:block;position:relative}.yt-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;background:rgba(229,9,20,.92);color:#fff;display:grid;place-items:center;font-size:26px;padding-left:5px;box-shadow:0 8px 30px rgba(0,0,0,.5);z-index:2;transition:transform .2s}.yt-fig a:hover .yt-play{transform:translate(-50%,-50%) scale(1.1)}
+
 .pt-box{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--ink-2)}
 .pt-text h2{margin:12px 0 10px;font-size:clamp(26px,3.2vw,38px);line-height:1.2}
 .pt-text p{color:var(--muted);margin:0 0 18px}
@@ -534,9 +537,10 @@ footer small{color:var(--muted);font-size:13px}
           <span class="km">ក្រោយវគ្គនេះ អ្នកក៏អាចបង្កើតភាពយន្តរបស់អ្នកផ្ទាល់បានដែរ។</span>
           <span class="en">After this class, you can make one too.</span>
         </p>
+        <a class="btn btn-gold yt-btn" href="https://youtu.be/QbP7PfDzJtw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span class="km">មើលភាពយន្តនៅលើ YouTube</span><span class="en">Watch the film on YouTube</span></a>
       </div>
       <div class="frames">
-        <figure><img src="img/olt-wide.jpg" alt="ONE LAST TIME film poster, two survivors in a ruined Phnom Penh" width="1672" height="941" loading="lazy"><figcaption>ONE LAST TIME</figcaption></figure>
+        <figure class="yt-fig"><a href="https://youtu.be/QbP7PfDzJtw" target="_blank" rel="noopener" aria-label="Watch ONE LAST TIME on YouTube"><span class="yt-play" aria-hidden="true">▶</span><img src="img/olt-wide.jpg" alt="ONE LAST TIME film poster, two survivors in a ruined Phnom Penh" width="1672" height="941" loading="lazy"></a><figcaption>ONE LAST TIME</figcaption></figure>
         <figure><img src="img/olt-pp2044.jpg" alt="ONE LAST TIME, Phnom Penh 2044 scene" width="1448" height="1086" loading="lazy"><figcaption>PHNOM PENH 2044</figcaption></figure>
         <figure class="poster-fig"><img src="img/olt-poster-2.jpg" alt="ONE LAST TIME portrait poster" width="1024" height="1536" loading="lazy"><figcaption>100% AI</figcaption></figure>
       </div>
@@ -563,7 +567,7 @@ footer small{color:var(--muted);font-size:13px}
         <div class="pt-text">
           <div class="label"><span class="km">Prompt ឥតគិតថ្លៃ</span><span class="en">Free prompts</span></div>
           <h2><span class="km">បង្កើតរូបទាំងនេះ ដោយមុខរបស់អ្នកផ្ទាល់</span><span class="en">Make these pictures with your own face</span></h2>
-          <p><span class="km">Prompt ៣៧ ដែលប្រើបានភ្លាមៗ ជាមួយ ChatGPT, Gemini និង Seedream។ ចម្លង បញ្ចូលរូបមុខ ហើយរួចរាល់។</span><span class="en">37 ready-to-use prompts for ChatGPT, Gemini and Seedream. Copy, add your face photo, done.</span></p>
+          <p><span class="km">Prompt ៥៧ ដែលប្រើបានភ្លាមៗ ជាមួយ ChatGPT, Gemini និង Seedream។ ចម្លង បញ្ចូលរូបមុខ ហើយរួចរាល់។</span><span class="en">57 ready-to-use prompts for ChatGPT, Gemini and Seedream. Copy, add your face photo, done.</span></p>
           <a class="btn btn-gold" href="/prompts/"><span class="km">មើល Prompt ទាំងអស់ →</span><span class="en">See all prompts →</span></a>
         </div>
         <div class="pt-grid"><a class="pt-pic" href="/prompts/#horror-clown"><img src="img/prompts/horror-clown.jpg" alt="Horror clown" loading="lazy"></a><a class="pt-pic" href="/prompts/#ash-front-man"><img src="img/prompts/ash-front-man.jpg" alt="Smoke and fire hero" loading="lazy"></a><a class="pt-pic" href="/prompts/#moon-hand"><img src="img/prompts/moon-hand.jpg" alt="Holding the moon" loading="lazy"></a><a class="pt-pic" href="/prompts/#hope-letters"><img src="img/prompts/hope-letters.jpg" alt="Portrait inside letters" loading="lazy"></a></div>
