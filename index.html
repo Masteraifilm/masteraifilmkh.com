@@ -672,7 +672,7 @@ footer small{color:var(--muted);font-size:13px}
       <div class="ticket" role="group" aria-label="Price">
         <div class="admit"><span>ADMIT ONE</span><span>★</span></div>
         <span class="was">$499</span>
-        <span class="now"><sup>$</sup>99</span>
+        <span class="now"><sup>$</sup>149</span>
         <span class="for"><span class="km">តម្លៃពិសេស សម្រាប់តែសិស្ស ១០ នាក់ដំបូងប៉ុណ្ណោះ</span><span class="en">Special price for the first 10 students only.</span></span>
         <hr>
         <ul>
@@ -1073,7 +1073,7 @@ footer small{color:var(--muted);font-size:13px}
     if(el.classList.contains('ticket')){
       var now=el.querySelector('.now');
       [].slice.call(now.childNodes).forEach(function(n){if(n.nodeType===3&&/\d/.test(n.nodeValue)){var node=n,t0=null;node.nodeValue='499';
-        setTimeout(function(){requestAnimationFrame(function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1300),e=1-Math.pow(1-p,4);node.nodeValue=Math.round(499-400*e);if(p<1)requestAnimationFrame(f)})},strong?700:350)}});
+        setTimeout(function(){requestAnimationFrame(function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1300),e=1-Math.pow(1-p,4);node.nodeValue=Math.round(499-350*e);if(p<1)requestAnimationFrame(f)})},strong?700:350)}});
       if(strong)setTimeout(function(){el.classList.add('settled')},1500);
     }
   }
